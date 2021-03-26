@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.kmvdata.kotlin.demoflickrmvvm"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'androidx.core:core-ktx:1.3.2'
+
+    implementation "androidx.activity:activity-ktx:1.2.1"
+
+    // Fragment KTX： 模块提供了一系列扩展程序以简化 Fragment API。
+    implementation "androidx.fragment:fragment-ktx:1.3.1"
+
+    // ViewModel KTX 库提供了一个 viewModelScope() 函数，可让您更轻松地从 ViewModel 启动协程。
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+
+    // Lifecycle KTX： 为每个 Lifecycle 对象定义一个 LifecycleScope。在此范围内启动的协程会在 Lifecycle 被销毁时取消。
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0"
+
+    // Navigation KTX (需含Fragment KTX 和 Lifecycle KTX模块)：Navigation 库的每个组件都有自己的 KTX 版本，用于调整 API 以使其更简洁且更符合 Kotlin 的语言习惯。
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.4"
+
+    // Room KTX：Room 扩展程序增加了对数据库事务的协程支持。
+    implementation "androidx.room:room-ktx:2.2.6"
+
+    // WorkManager KTX：为协程提供一流的支持。
+    implementation "androidx.work:work-runtime-ktx:2.5.0"
+
+    // Recycler 的下拉控件
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    // https://developer.android.com/jetpack/androidx/releases/viewpager2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // https://github.com/material-components/material-components-android
+    implementation 'com.google.android.material:material:1.3.0'
+}

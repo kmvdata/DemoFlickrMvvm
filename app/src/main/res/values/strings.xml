@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">KmvFlickr</string>
+    <string name="image_description">Image Description</string>
+    <string name="title_talk">Talk</string>
+    <string name="title_flickr_photo">Flickr Photo</string>
+    <string name="title_local_photo">Local Photo</string>
+    <string name="title_mine">Mine</string>
+    <string name="description_user_name">User Name</string>
+    <string name="description_nick_name_colon">Nick Name:</string>
+    <string name="default_nickname">nickname</string>
+    <string name="description_talk_name">Talk Name</string>
+    <string name="description_talk_content">Talk Content......</string>
+    <string name="description_talk_time">AM 00:00</string>
+</resources>

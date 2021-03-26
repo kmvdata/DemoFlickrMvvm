@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/talk"
+        android:icon="@drawable/ic_baseline_sms_32"
+        android:title="@string/title_talk"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/flickr_photo"
+        android:icon="@drawable/ic_main_navigation_flickr_photo_32"
+        android:title="@string/title_flickr_photo"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/mine"
+        android:icon="@drawable/ic_mine_circle_32"
+        android:title="@string/title_mine"
+        app:showAsAction="ifRoom|withText" />
+</menu>
