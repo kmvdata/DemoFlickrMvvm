@@ -24,16 +24,16 @@ import java.util.*
 
 private const val TAG = "TAG-TalkFragment"
 
-class TalkFragment : Fragment() {
+class TalkListFragment : Fragment() {
 
     private lateinit var talkRecyclerView: RecyclerView
     private lateinit var swipeContainer: SwipeRefreshLayout
 
     companion object {
-        fun newInstance() = TalkFragment()
+        fun newInstance() = TalkListFragment()
     }
 
-    private lateinit var viewModel: TalkViewModel
+    private lateinit var viewModel: TalkListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,7 +44,7 @@ class TalkFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this).get(TalkViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(TalkListViewModel::class.java)
 
         swipeContainer = view.findViewById(R.id.swipeContainer)
         talkRecyclerView = view.findViewById(R.id.talkRecyclerView)
@@ -80,7 +80,7 @@ class TalkFragment : Fragment() {
             Log.d(TAG, "bind talkInfoVO: ${Gson().toJson(talkInfoVO)}")
             this.talkInfoVO = talkInfoVO
             val iconImage: ImageView = talkItemView.findViewById(R.id.iconImageView)
-            Glide.with(this@TalkFragment)
+            Glide.with(this@TalkListFragment)
                 .load(talkInfoVO.iconUrl)
                 .into(iconImage)
 

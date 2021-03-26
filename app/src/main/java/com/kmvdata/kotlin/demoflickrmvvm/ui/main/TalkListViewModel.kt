@@ -17,7 +17,7 @@ import kotlin.collections.ArrayList
 
 private const val TAG = "TAG-TalkViewModel"
 
-class TalkViewModel : ViewModel() {
+class TalkListViewModel : ViewModel() {
     val talkInfoes: MutableLiveData<List<TalkInfoVO>> = MutableLiveData()
 
     init {

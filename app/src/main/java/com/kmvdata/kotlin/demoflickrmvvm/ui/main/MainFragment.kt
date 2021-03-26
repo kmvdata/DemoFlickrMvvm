@@ -85,7 +85,7 @@ class MainFragment : Fragment() {
             // Return a NEW fragment instance in createFragment(int)
             return when (position) {
                 0 -> {
-                    TalkFragment()
+                    TalkListFragment()
                 }
                 1 -> {
                     FlickrPhotoFragment()
