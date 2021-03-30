@@ -60,6 +60,7 @@ dependencies {
 
     // Navigation KTX (需含Fragment KTX 和 Lifecycle KTX模块)：Navigation 库的每个组件都有自己的 KTX 版本，用于调整 API 以使其更简洁且更符合 Kotlin 的语言习惯。
     implementation "androidx.navigation:navigation-ui-ktx:2.3.4"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.4"
 
     // Room KTX：Room 扩展程序增加了对数据库事务的协程支持。
     implementation "androidx.room:room-ktx:2.2.6"
